@@ -1,5 +1,5 @@
 <?php
-class FoodObject {
+class Food {
     private $name;
     private $price;
 
@@ -7,12 +7,16 @@ class FoodObject {
         $this->name = $name;
         $this->price = $price;
     }
+
+    public function show_price(){   //tuika
+        //echo $this->name;     //tuika
+        echo $this->price; 
+    }
 }
-
 // 食品オブジェクトの作成
-$food = new FoodObject("potato", 250);
+$food = new Food("potato", 250);
 
-class AnimalObject {
+class Animal {
     private $name;
     private $height;
     private $weight;
@@ -22,14 +26,21 @@ class AnimalObject {
         $this->height = $height;
         $this->weight = $weight;
     }
+    public function show_height(){   //tuika
+        //echo $this->name;     //tuika
+        echo $this->height; 
+    }
 }
 
 // 動物オブジェクトの作成
-$animal = new AnimalObject("dog", 60, 5000);
+$animal = new Animal("dog", 60, 5000);
 
 // オブジェクトを出力
 print_r($food);
-echo "\n";
+echo '<br>';
 print_r($animal);
-
+echo '<br>';
+$food->show_price();
+echo '<br>';
+$animal->show_height();
 ?>
